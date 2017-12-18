@@ -5,7 +5,7 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class Example002Test extends TestCase
+class Example003Test extends TestCase
 {
     // テスト対象のオジェクト
     private $target = null;
