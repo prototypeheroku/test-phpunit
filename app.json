@@ -7,12 +7,11 @@
     {
       "heroku-postgresql:hobby-dev"
     }
-  ]
+  ],
   "environments": {
     "test": {
       "scripts": {
-        "test-setup": "gem install rubocop",
-        "test": "rubocop ."
+        "test": "phpunit"
       }
     }
   }
