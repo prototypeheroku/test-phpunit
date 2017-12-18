@@ -37,6 +37,6 @@ class Example002Test extends TestCase
         $b = $this->target->B();
 
         //なんかテストコード書く
-        $this->assertEquals(1,$b);
+        $this->assertEquals(2,$b);
     }
 }
