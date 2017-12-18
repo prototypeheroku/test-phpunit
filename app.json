@@ -1,18 +1,12 @@
 {
-  "buildpacks": [
-      "url": "https://github.com/heroku/heroku-buildpack-php"
-    }
-  ],
-  "addons": [
-    {
-      "heroku-postgresql:hobby-dev"
-    }
-  ]
+  "name": "Laravel Start",
+  "description": "Laravel for Project",
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "buildpacks": [{"url":"https://github.com/heroku/heroku-buildpack-php.git"}],
   "environments": {
     "test": {
       "scripts": {
-        "test-setup": "gem install rubocop",
-        "test": "rubocop ."
+        "test": "phpunit"
       }
     }
   }
