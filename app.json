@@ -1,0 +1,19 @@
+{
+  "buildpacks": [
+      "url": "https://github.com/heroku/heroku-buildpack-php"
+    }
+  ],
+  "addons": [
+    {
+      "heroku-postgresql:hobby-dev"
+    }
+  ]
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "gem install rubocop",
+        "test": "rubocop ."
+      }
+    }
+  }
+}
