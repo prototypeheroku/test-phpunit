@@ -1,21 +1,6 @@
 {
-  "name": "phpunit test",
-  "description": "phpunit test",
-  "buildpacks": [
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-php"
-    }
-  ],
-  "addons": [
-    {
-      "heroku-postgresql:hobby-dev"
-    }
-  ],
-  "environments": {
-    "test": {
-      "scripts": {
-        "test": "phpunit"
-      }
-    }
-  }
+  "name": "Laravel Start",
+  "description": "Laravel for Project",
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "buildpacks": [{"url":"https://github.com/heroku/heroku-buildpack-php.git"}]
 }
