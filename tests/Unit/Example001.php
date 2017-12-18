@@ -20,6 +20,6 @@ class Example001
     public function B()
     {
         //なんかテストコード書く
-        return 2;
+        return 1;
     }
 }
