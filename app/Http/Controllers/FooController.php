@@ -17,6 +17,8 @@ class FooController extends Controller
 
     public function foo1()
     {
+
         return 'Foo1!!';
+
     }
 }
