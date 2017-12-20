@@ -9,5 +9,8 @@
         "test": "phpunit"
       }
     }
+  },
+  "scripts": {
+      "postdeploy": "./provision.sh"
   }
 }
