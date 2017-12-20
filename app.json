@@ -21,6 +21,6 @@
     }
   },
   "scripts": {
-    "postdeploy": "./provision.sh"
+    "postdeploy": "provision.sh"
   }
 }
