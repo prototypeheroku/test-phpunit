@@ -21,6 +21,6 @@
     }
   },
   "scripts": {
-    "postdeploy": "php artisan migrate:install"
+    "postdeploy": ""
   }
 }
