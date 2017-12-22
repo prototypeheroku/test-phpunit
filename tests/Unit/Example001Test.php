@@ -10,6 +10,15 @@ class Example001Test extends TestCase
     // テスト対象のオジェクト
     private $target = null;
 
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testBasicTest()
+    {
+        $this->assertTrue(true);
+    }
 
     public function testA()
     {
