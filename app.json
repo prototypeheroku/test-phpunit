@@ -1,5 +1,5 @@
 {
-  "name": "Laravel Start",
+  "name": "Laravel Sample1",
   "description": "Laravel for Project",
   "addons": ["heroku-postgresql:hobby-dev"],
   "buildpacks": [{"url":"https://github.com/heroku/heroku-buildpack-php.git"}],
