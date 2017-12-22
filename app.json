@@ -1,5 +1,5 @@
 {
-  "name": "Laravel Sample",
+  "name": "Laravel Sample1",
   "description": "Laravel for Project",
   "addons": ["heroku-postgresql:hobby-dev"],
   "buildpacks": [{"url":"https://github.com/heroku/heroku-buildpack-php.git"}],
@@ -9,18 +9,5 @@
         "test": "phpunit"
       }
     }
-  },
-  "env": {
-    "SECRET_TOKEN": {
-      "description": "A secret key for verifying the integrity of signed cookies.",
-      "generator": "secret"
-    },
-    "WEB_CONCURRENCY": {
-      "description": "The number of processes to run.",
-      "value": "5"
-    }
-  },
-  "scripts": {
-    "postdeploy": "./provision.sh"
   }
 }
