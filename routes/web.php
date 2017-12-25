@@ -14,4 +14,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('foo/foo2', 'FooController@foo2');
-Route::get('sample/seach', 'SampleController@seach');
+Route::get('sample/search', 'SampleController@search');
