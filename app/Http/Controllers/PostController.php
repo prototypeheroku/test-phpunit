@@ -8,12 +8,6 @@ class PostController extends Controller
 {
     public function index()
     {
-        // 1. 新しい順に取得できない
-        // $posts = Post::all();
-
-        // 2. 記述が長くなる
-        // $posts = Post::orderByDesc('created_at')->get();
-
         // 3. latestメソッドがおすすめ
         $posts = Post::latest()->get();
 
