@@ -2,8 +2,8 @@
     <table >
         <thead>
             <tr>
-                <th>{{ __('Title') }}</th>
-                <th>{{ __('備考') }}</th>
+                <th>{{ __('コード') }}</th>
+                <th>{{ __('内容') }}</th>
             </tr>
         </thead>
         <tbody>
