@@ -30,9 +30,9 @@ class PostController extends Controller
     {
         $post = new Post;
         $post->title = $request->title;
-        $post->body = $request->body;
+        $post->comment = $request->comment;
         $post->save();
-        return redirect('posts/'.$post->id);
+        return redirect('posts/');
     }
 
     public function edit(Post $post)
