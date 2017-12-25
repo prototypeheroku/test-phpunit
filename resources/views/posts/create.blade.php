@@ -1,6 +1,4 @@
 <form action="{{ url('posts/store') }}" method="post">
-    {{ csrf_field() }}
-    {{ method_field('POST') }}
     <div>
         <label for="title">{{ __('Title') }}</label>
         <input id="title" type="text" name="title" required autofocus>
