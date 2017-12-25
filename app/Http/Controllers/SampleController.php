@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
-class SearchController extends Controller
+class SampleController extends Controller
 {
     public function search()
     {
