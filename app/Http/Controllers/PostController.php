@@ -25,7 +25,9 @@ class PostController extends Controller
 
     public function create()
     {
-        return view('posts.create');
+        $post->title = "B001";
+        $post->comment = "testB001";
+        return view('posts.create', ['post' => $post]);
     }
 
     public function store(Request $request)
