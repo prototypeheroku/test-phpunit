@@ -12,8 +12,8 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::latest()->get();
-        //$posts = DB::table('posts')->get();
+        //$posts = Post::latest()->get();
+        $posts = DB::table('posts')->get();
 
         return view('posts.index', ['posts' => $posts]);
     }
