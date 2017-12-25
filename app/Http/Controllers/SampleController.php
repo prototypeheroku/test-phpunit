@@ -8,7 +8,7 @@ class SearchController extends Controller
 {
     public function search()
     {
-        return view('sample.sample', [
+        return view('sample.search', [
             'title' => 'サンプル画面',
             'body' => 'テスト'
         ]);
