@@ -9,8 +9,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        // 3. latestƒƒ\ƒbƒh‚ª‚¨‚·‚·‚ß
-        $posts = Post::latest()->get();
+        $posts = Posts::latest()->get();
         //$posts = DB::table('posts')->get();
 
         return view('posts.index', ['posts' => $posts]);
