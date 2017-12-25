@@ -1,7 +1,3 @@
-@php
-    $title = __('Posts');
-@endphp
-@section('content')
 <h1>{{ $title }}</h1>
 <div >
     <table >
@@ -19,4 +15,3 @@
         </tbody>
     </table>
 </div>
-@endsection
