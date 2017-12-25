@@ -1,4 +1,4 @@
-<form action="{{ url('posts') }}" method="post">
+<form action="{{ url('posts/store') }}" method="post">
     {{ csrf_field() }}
     {{ method_field('POST') }}
     <div>
