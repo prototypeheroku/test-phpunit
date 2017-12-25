@@ -1,4 +1,4 @@
-<form action="{{ url('posts') }}" method="post">
+<form action="{{ url('posts/add') }}" method="post">
     <div>
         <label for="title">{{ __('Title') }}</label>
         <input id="title" type="text" name="title" required autofocus>
