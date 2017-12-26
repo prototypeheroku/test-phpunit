@@ -1,5 +1,5 @@
 ﻿<div >
-<a href="{{ url('posts/add') }}" >追加</a>
+<a href="{{ url('posts/create') }}" >追加</a>
     <table >
         <thead>
             <tr>
