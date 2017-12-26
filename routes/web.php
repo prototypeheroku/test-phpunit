@@ -20,4 +20,4 @@ Route::resource('posts', 'PostController');
 Route::post('posts/add', 'PostController@add');
 Route::post('posts/update', 'PostController@update');
 Route::post('posts/delete', 'PostController@delete');
-Route::controller('posts', 'PostController');
+Route::get('posts/modify', 'UserController@modify');
