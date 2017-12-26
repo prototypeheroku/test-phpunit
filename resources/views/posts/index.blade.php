@@ -15,8 +15,8 @@
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->comment }}</td>
                 <td>
-　　　　　　　　　　<a href="{{ url('posts/modify') }}" >更新</a>
-　　　　　　　　　　<a href="{{ url('posts/'.$post->title.'/delete') }}" >削除</a>
+　　　　　　　　　　<a href="{{ url('posts/modify/{{{ $post->title }}}') }}" >更新</a>
+　　　　　　　　　　<a href="{{ url('posts/delete/{{{ $post->title }}}') }}" >削除</a>
 　　　　　　　　</td>
              </tr>
         @endforeach

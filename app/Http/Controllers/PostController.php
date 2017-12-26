@@ -48,11 +48,12 @@ class PostController extends Controller
     }
 
 
-    public function modify()
+    public function modify($title)
     {
-        $post = new Post;
-        $post->title = "C001";
-        $post->comment = "comment001";
+        
+        //$posts = DB::table('posts')->get();
+        $post = DB::table('posts')->where('title', $title)->first();
+
         return view('posts.modify', ['post' => $post]);
     }
 
