@@ -13,6 +13,10 @@ class PostController extends Controller
     public function index()
     {
         //$posts = Post::latest()->get();
+
+        DB::table('posts')->insert(
+            ['title' => 'B001', 'comment' => 'testB001','votes' => 0]
+        		);
         $posts = DB::table('posts')->get();
 
         return view('posts.index', ['posts' => $posts]);
