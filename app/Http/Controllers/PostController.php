@@ -23,11 +23,6 @@ class PostController extends Controller
         return view('posts.index', ['posts' => $posts]);
     }
 
-    public function show(Post $post)
-    {
-        return view('posts.show', ['post' => $post]);
-    }
-
     public function create()
     {
         $post = new Post;
@@ -43,6 +38,43 @@ class PostController extends Controller
         );
 
         return redirect('posts/');
+    }
+
+    public function delete(Request $request)
+    {
+        DB::table('posts')->where('title', '=', $request->title)->delete();
+
+        return redirect('posts/');
+    }
+
+
+    public function update(Request $request)
+    {
+        DB::table('posts')
+            ->where('title', $request->title)
+            ->update(['comment' => $request->comment]);
+
+        return redirect('posts/');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+    public function show(Post $post)
+    {
+        return view('posts.show', ['post' => $post]);
     }
 
     public function store(Request $request)

@@ -19,3 +19,4 @@ Route::get('sample/search', 'SampleController@search');
 Route::resource('posts', 'PostController');
 Route::post('posts/add', 'PostController@add');
 Route::post('posts/update', 'PostController@update');
+Route::post('posts/delete', 'PostController@delete');

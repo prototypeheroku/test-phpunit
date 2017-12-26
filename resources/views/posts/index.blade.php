@@ -5,7 +5,8 @@
             <tr>
                 <th>{{ __('コード') }}</th>
                 <th>{{ __('内容') }}</th>
-                <th>{{ __('編集') }}</th>
+                <th>{{ __('更新') }}</th>
+                <th>{{ __('削除') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -14,8 +15,8 @@
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->comment }}</td>
                 <td>
-　　　　　　　　　　<a href="{{ url('posts/update') }}" >更新</a>
-　　　　　　　　　　<a href="{{ url('posts/'.$post->title.'/edit') }}" >削除</a>
+　　　　　　　　　　<a href="{{ url('posts/'.$post->title.'/update') }}" >更新</a>
+　　　　　　　　　　<a href="{{ url('posts/'.$post->title.'/delete') }}" >削除</a>
 　　　　　　　　</td>
              </tr>
         @endforeach
