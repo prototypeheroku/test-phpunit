@@ -48,7 +48,7 @@ class PostController extends Controller
     }
 
 
-    public function modify)
+    public function modify()
     {
         $post = new Post;
         $post->title = "C001";
