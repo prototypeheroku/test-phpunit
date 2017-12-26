@@ -21,3 +21,6 @@ Route::post('posts/add', 'PostController@add');
 Route::post('posts/update', 'PostController@update');
 Route::post('posts/delete', 'PostController@delete');
 Route::get('posts/modify', 'UserController@modify');
+Route::get('posts/modify/{title}', function ($title) {
+    return $title;
+});
