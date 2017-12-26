@@ -15,7 +15,7 @@
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->comment }}</td>
                 <td>
-　　　　　　　　　　<a href="{{ url('posts/'.$post->title.'/update') }}" >更新</a>
+　　　　　　　　　　<a href="{{ url('posts/modify') }}" >更新</a>
 　　　　　　　　　　<a href="{{ url('posts/'.$post->title.'/delete') }}" >削除</a>
 　　　　　　　　</td>
              </tr>
