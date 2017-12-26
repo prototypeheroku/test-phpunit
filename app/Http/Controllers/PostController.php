@@ -14,9 +14,10 @@ class PostController extends Controller
     {
         //$posts = Post::latest()->get();
 
-        DB::table('posts')->insert(
-            ['title' => 'B001', 'comment' => 'testB001']
-        		);
+        //DB::table('posts')->insert(
+        //    ['title' => 'B001', 'comment' => 'testB001']
+        //);
+
         $posts = DB::table('posts')->get();
 
         return view('posts.index', ['posts' => $posts]);
@@ -33,6 +34,15 @@ class PostController extends Controller
         $post->title = "B001";
         $post->comment = "testB001";
         return view('posts.create', ['post' => $post]);
+    }
+
+    public function add(Request $request)
+    {
+        DB::table('posts')->insert(
+            ['title' => $request->title, 'comment' => $request->comment]
+        );
+
+        return redirect('posts/');
     }
 
     public function store(Request $request)
