@@ -15,7 +15,7 @@ class PostController extends Controller
         //$posts = Post::latest()->get();
 
         DB::table('posts')->insert(
-            ['title' => 'B001', 'comment' => 'testB001','votes' => 0]
+            ['title' => 'B001', 'comment' => 'testB001']
         		);
         $posts = DB::table('posts')->get();
 
