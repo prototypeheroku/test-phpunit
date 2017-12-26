@@ -5,6 +5,7 @@
             <tr>
                 <th>{{ __('コード') }}</th>
                 <th>{{ __('内容') }}</th>
+                <th>{{ __('編集') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -12,6 +13,10 @@
             <tr>
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->comment }}</td>
+                <td>
+　　　　　　　　　　<a href="{{ url('posts/update') }}" >更新</a>
+　　　　　　　　　　<a href="{{ url('posts/'.$post->title.'/edit') }}" >削除</a>
+　　　　　　　　</td>
              </tr>
         @endforeach
         </tbody>
