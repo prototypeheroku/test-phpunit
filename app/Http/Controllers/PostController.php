@@ -91,13 +91,6 @@ class PostController extends Controller
         return view('posts.edit', ['post' => $post]);
     }
 
-    public function update(Request $request, Post $post)
-    {
-        $post->title = $request->title;
-        $post->body = $request->body;
-        $post->save();
-        return redirect('posts/'.$post->id);
-    }
 
     public function destroy(Post $post)
     {
