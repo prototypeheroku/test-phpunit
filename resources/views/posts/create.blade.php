@@ -9,5 +9,5 @@
         <label for="comment">{{ __('Comment') }}</label>
         <input id="comment" type="text" name="comment" value="{{ $post->comment }}" required autofocus>
     </div>
-    <button type="submit" name="submit">{{ __('“o˜^') }}</button>
+    <button type="submit" name="submit">{{ __('Add') }}</button>
 </form>
