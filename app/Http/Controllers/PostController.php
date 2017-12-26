@@ -53,7 +53,7 @@ class PostController extends Controller
         $post = new Post;
         $post->title = "C001";
         $post->comment = "comment001";
-        return view('posts.update', ['post' => $post]);
+        return view('posts.modify', ['post' => $post]);
     }
 
     public function update(Request $request)
