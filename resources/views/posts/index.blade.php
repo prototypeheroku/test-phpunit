@@ -1,4 +1,5 @@
-<div >
+﻿<div >
+<a href="{{ url('posts/add') }}" >追加</a>
     <table >
         <thead>
             <tr>
