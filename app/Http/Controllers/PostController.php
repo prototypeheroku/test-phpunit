@@ -50,10 +50,10 @@ class PostController extends Controller
 	DB::delete('delete from posts where title = ?', [$request->title]);
 	    
 	// トランザクションをロールバック
-	//DB::rollBack();
+	DB::rollBack();
 	    
 	// トランザクションをコミット
-	DB::commit();
+	//DB::commit();
 	    
         // 一覧画面を表示
         return redirect('posts/');
