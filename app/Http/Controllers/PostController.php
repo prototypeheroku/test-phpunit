@@ -34,6 +34,10 @@ class PostController extends Controller
 
     public function add(Request $request)
     {
+	// トランザクションを開始
+	DB::beginTransaction();
+	    
+	    
 	// 追加
         //DB::table('posts')->insert(
         //    ['title' => $request->title, 'comment' => $request->comment]
@@ -44,7 +48,14 @@ class PostController extends Controller
 	
 	// 削除    
 	DB::delete('delete from posts where title = ?', [$request->title]);
-
+	    
+	// トランザクションをロールバック
+	//DB::rollBack();
+	    
+	// トランザクションをコミット
+	DB::commit();
+	    
+        // 一覧画面を表示
         return redirect('posts/');
     }
 
