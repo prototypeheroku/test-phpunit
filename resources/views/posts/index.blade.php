@@ -17,6 +17,7 @@
                 <td>
 　　　　　　　　　　<a href="{{ url('posts/modify/{'.$post->title.'}') }}" >更新</a>
 　　　　　　　　　　<a href="{{ url('posts/delete/{{{ $post->title }}}') }}" >削除</a>
+                  <a href="{{ action('PostsController@delete') }}">削除（action）</a>
 　　　　　　　　</td>
              </tr>
         @endforeach
