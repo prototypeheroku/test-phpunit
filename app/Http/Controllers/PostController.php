@@ -27,8 +27,8 @@ class PostController extends Controller
     public function create()
     {
         $post = new Post;
-        $post->title = "B001";
-        $post->comment = "testB001";
+        $post->title = "A001";
+        $post->comment = "";
         return view('posts.create', ['post' => $post]);
     }
 
@@ -38,7 +38,7 @@ class PostController extends Controller
         //    ['title' => $request->title, 'comment' => $request->comment]
         //);
 	    
-	DB::update('update posts set comment = ? where title = ?', [$request->comment,'A001']);
+	DB::update('update posts set comment = ? where title = ?', [$request->comment,$request->title]);
 
         return redirect('posts/');
     }
