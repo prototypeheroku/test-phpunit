@@ -33,9 +33,11 @@ class PostController extends Controller
 
     public function add(Request $request)
     {
-        DB::table('posts')->insert(
-            ['title' => $request->title, 'comment' => $request->comment]
-        );
+        //DB::table('posts')->insert(
+        //    ['title' => $request->title, 'comment' => $request->comment]
+        //);
+	    
+	DB::update('update users set comment = ? where title = ?', [$request->comment,'A001']);
 
         return redirect('posts/');
     }
