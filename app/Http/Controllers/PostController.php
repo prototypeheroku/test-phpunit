@@ -18,7 +18,8 @@ class PostController extends Controller
         //    ['title' => 'B001', 'comment' => 'testB001']
         //);
 
-        $posts = DB::table('posts')->get();
+        //$posts = DB::table('posts')->get();
+	$posts = DB::select('select * from posts order by title');
 
         return view('posts.index', ['posts' => $posts]);
     }
