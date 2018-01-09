@@ -34,11 +34,16 @@ class PostController extends Controller
 
     public function add(Request $request)
     {
+	// 追加
         //DB::table('posts')->insert(
         //    ['title' => $request->title, 'comment' => $request->comment]
         //);
-	    
-	DB::update('update posts set comment = ? where title = ?', [$request->comment,$request->title]);
+	
+	// 更新    
+	//DB::update('update posts set comment = ? where title = ?', [$request->comment,$request->title]);
+	
+	// 削除    
+	DB::delete('delete from posts where title = ?', [$request->title]);
 
         return redirect('posts/');
     }
