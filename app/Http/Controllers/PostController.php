@@ -37,7 +37,7 @@ class PostController extends Controller
         //    ['title' => $request->title, 'comment' => $request->comment]
         //);
 	    
-	DB::update('update users set comment = ? where title = ?', [$request->comment,'A001']);
+	DB::update('update posts set comment = ? where title = ?', [$request->comment,'A001']);
 
         return redirect('posts/');
     }
