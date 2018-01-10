@@ -34,7 +34,5 @@
         @endforeach 
         </tbody>
     </table>
-    <!-- page control -->
-    {!! $posts->render() !!}
     
 @stop
