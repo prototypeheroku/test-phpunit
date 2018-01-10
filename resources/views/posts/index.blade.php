@@ -6,7 +6,7 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <a href="/users/create" class="btn btn-primary" style="margin:20px;">新規登録</a>
+            <a href="/posts/create" class="btn btn-primary" style="margin:20px;">新規登録</a>
         </div>
     </div>
 
@@ -35,6 +35,6 @@
         </tbody>
     </table>
     <!-- page control -->
-    {!! $users->render() !!}
+    {!! $posts->render() !!}
     
 @stop
