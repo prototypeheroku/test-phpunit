@@ -44,16 +44,16 @@ class PostController extends Controller
         //);
 	
 	// 更新    
-	//DB::update('update posts set comment = ? where title = ?', [$request->comment,$request->title]);
+	DB::update('update posts set comment = ? where title = ?', [$request->comment,$request->title]);
 	
 	// 削除    
-	DB::delete('delete from posts where title = ?', [$request->title]);
+	//DB::delete('delete from posts where title = ?', [$request->title]);
 	    
 	// トランザクションをロールバック
-	DB::rollBack();
+	//DB::rollBack();
 	    
 	// トランザクションをコミット
-	//DB::commit();
+	DB::commit();
 	    
         // 一覧画面を表示
         return redirect('posts/');
