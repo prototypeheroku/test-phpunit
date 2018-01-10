@@ -1,6 +1,18 @@
-﻿<div >
-<a href="{{ url('posts/create') }}" >追加</a>
-    <table >
+@extends('layout')
+
+@section('content')
+
+    <h1>一覧表示</h1>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <a href="/users/create" class="btn btn-primary" style="margin:20px;">新規登録</a>
+        </div>
+    </div>
+
+    <!-- table -->
+    <table class="table table-striped">
+    
         <thead>
             <tr>
                 <th>{{ __('コード') }}</th>
@@ -19,7 +31,10 @@
 　　　　　　　　　　<a href="{{ url('posts/delete/') }}" >削除</a>
 　　　　　　　　</td>
              </tr>
-        @endforeach
+        @endforeach 
         </tbody>
     </table>
-</div>
+    <!-- page control -->
+    {!! $users->render() !!}
+    
+@stop
