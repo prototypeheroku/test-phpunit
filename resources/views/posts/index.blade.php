@@ -26,14 +26,14 @@
         @foreach ($posts as $post)
             <tr>
                 <td style="width:20%">{{ $post->title }}</td>
-                <td style="width:30%">{{ $post->comment }}</td>
-                <td style="width:15%">
+                <td style="width:40%">{{ $post->comment }}</td>
+                <td>
 　　　　　　　　　　<a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">詳細</a>
 　　　　　　　　 </td>
-                <td style="width:15%">
+                <td>
 　　　　　　　　　　<a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
 　　　　　　　　 </td>
-                <td style="width:15%">
+                <td>
                   <form method="post" action="/posts/destroy/{{$post->title}}">
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                     <input type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
