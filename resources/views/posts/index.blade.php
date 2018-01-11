@@ -19,6 +19,7 @@
                 <th>{{ __('内容') }}</th>
                 <th>{{ __('') }}</th>
                 <th>{{ __('') }}</th>
+                <th>{{ __('') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -28,10 +29,12 @@
                 <td>{{ $post->comment }}</td>
                 <td>
 　　　　　　　　　　<a href="/posts/modify/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
+　　　　　　　　 </td>
+                <td>
                   <form method="post" action="/posts/delete/{{$post->title}}">
                     <input type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
                   </form>
-　　　　　　　　</td>
+　　　　　　　　 </td>
              </tr>
         @endforeach 
         </tbody>
