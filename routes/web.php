@@ -15,7 +15,7 @@ Route::get('/', function () {
 });
 Route::get('foo/foo2', 'FooController@foo2');
 Route::get('sample/search', 'SampleController@search');
-// ƒ‹[ƒg’Ç‰Á
+// CRUD画面
 Route::resource('posts', 'PostController');
 Route::post('posts/add', 'PostController@add');
 Route::get('posts/edit/{id}','PostController@edit');
