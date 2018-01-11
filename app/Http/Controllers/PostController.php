@@ -112,5 +112,14 @@ class PostController extends Controller
         //リダイレクト
 	return redirect()->to('/posts');
     }
+	
+    public function destroy($title)
+    {
+	// 更新
+	DB::delete('delete from posts where title = ?', [$title]);
+	    
+        //リダイレクト
+	return redirect()->to('/posts');
+    }
 
 }
