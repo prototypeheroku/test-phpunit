@@ -95,10 +95,11 @@ class PostController extends Controller
         //検索結果をビューに渡す
         //return view('posts.edit')->with('post',$post);
 	
-	$postRs = DB::select('select title,comment from posts where title = ?', [$title]);
-	$post = new Post;
-        $post->title = $postRs->title;
-        $post->comment = $postRs->comment;
+	//$postRs = DB::select('select title,comment from posts where title = ?', [$title]);
+	$post = DB::table('posts')->where('title', $title)->first();
+	//$post = new Post;
+        //$post->title = $postRs->title;
+        //$post->comment = $postRs->comment;
         return view('posts.edit', ['post' => $post]);
         //return view('posts.edit', ['post' => $post]);
 	//return view('posts.edit')->with('post',$post);
