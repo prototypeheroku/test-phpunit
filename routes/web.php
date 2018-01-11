@@ -18,5 +18,5 @@ Route::get('sample/search', 'SampleController@search');
 // CRUD画面
 Route::resource('posts', 'PostController');
 Route::post('posts/add', 'PostController@add');
-Route::get('posts/edit/{id}','PostController@edit');
-Route::post('posts/update/{id}','PostController@update');
+Route::get('posts/edit/{title}','PostController@edit');
+Route::post('posts/update/{title}','PostController@update');
