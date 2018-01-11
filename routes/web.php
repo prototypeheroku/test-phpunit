@@ -16,7 +16,7 @@ Route::get('/', function () {
 Route::get('foo/foo2', 'FooController@foo2');
 Route::get('sample/search', 'SampleController@search');
 // CRUD画面
-//Route::resource('posts', 'PostController');
+Route::resource('posts', 'PostController');
 Route::get('posts','PostController@index');
 Route::post('posts/add', 'PostController@add');
 Route::get('posts/edit/{title}','PostController@edit');
