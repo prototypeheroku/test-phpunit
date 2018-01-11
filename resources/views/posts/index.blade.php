@@ -31,8 +31,8 @@
 　　　　　　　　　　<a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
 　　　　　　　　 </td>
                 <td>
-                  <form method="post" action="/posts/delete/{{$post->title}}">
-                    <input type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
+                  <form method="post" action="/posts/destroy/{{$post->title}}">
+                    <input name="btn-destroy" type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
                   </form>
 　　　　　　　　 </td>
              </tr>
@@ -40,4 +40,17 @@
         </tbody>
     </table>
     
+@stop
+
+@section('script')
+$(function(){
+    $(".btn-destroy").click(function(){
+        if(confirm("本当に削除しますか？")){
+            //そのままsubmit（削除）
+        }else{
+            //cancel
+            return false;
+        }
+    });
+});
 @stop
