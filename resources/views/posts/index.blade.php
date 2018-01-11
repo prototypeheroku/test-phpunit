@@ -28,8 +28,6 @@
                 <td>
 　　　　　　　　　　<div>
                       <a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">詳細</a>
-                  </div>
-                  <div>
 　　　　　　　　　　    <a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
                   </div>
                   <div>
