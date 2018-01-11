@@ -104,6 +104,18 @@ class PostController extends Controller
         //return view('posts.edit', ['post' => $post]);
 	//return view('posts.edit')->with('post',$post);
     }
-
+	
+    public function update(Request $request, $title)
+    {
+        //レコードを検索
+        $post = Post::find($title);
+        //値を代入
+        $post->name = $request->title;
+        $post->email = $request->comment;
+        //保存（更新）
+        $post->save();
+        //リダイレクト
+        return redirect()->to('/$posts');
+    }
 
 }
