@@ -1,3 +1,15 @@
+@extends('layout')
+
+@section('content')
+
+    <h1>新規作成</h1>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <a href="/posts" class="btn btn-primary" style="margin:20px;">一覧に戻る</a>
+        </div>
+    </div>
+
 <form action="{{ url('posts/add') }}" method="post">
     {{ csrf_field() }}
     {{ method_field('POST') }}
@@ -11,3 +23,5 @@
     </div>
     <button type="submit" name="submit">{{ __('Add') }}</button>
 </form>
+
+@stop
