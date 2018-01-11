@@ -119,7 +119,9 @@ class PostController extends Controller
 	DB::delete('delete from posts where title = ?', [$title]);
 	    
         //リダイレクト
-	return redirect()->to('/posts');
+	//return redirect()->to('/posts');
+	$posts = DB::select('select * from posts order by title');
+        return view('posts.index', ['posts' => $posts]);
     }
 
 }
