@@ -29,8 +29,6 @@
 　　　　　　　　　　<div>
                       <a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">詳細</a>
 　　　　　　　　　　    <a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
-                  </div>
-                  <div>
                       <form method="post" action="/posts/destroy/{{$post->title}}">
                          <div>
                              <input type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
