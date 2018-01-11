@@ -27,7 +27,7 @@ class PostController extends Controller
     public function create()
     {
         $post = new Post;
-        $post->title = "A001";
+        $post->title = "";
         $post->comment = "";
         return view('posts.create', ['post' => $post]);
     }
@@ -56,7 +56,10 @@ class PostController extends Controller
 	DB::commit();
 	    
         // 一覧画面を表示
-        return redirect('posts/');
+        //return redirect('posts/');
+	
+	//一覧にリダイレクト
+        return redirect()->to('/posts');
     }
 
     public function delete(Request $request)
