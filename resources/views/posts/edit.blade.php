@@ -1,20 +1,32 @@
-@php
-    $title = __('Edit') . ': ' . $post->title;
-@endphp
-@extends('layouts.my')
+@extends('layout')
+
 @section('content')
-<h1>{{ $title }}</h1>
-<form action="{{ url('posts/'.$post->id) }}" method="post">
-    {{ csrf_field() }}
-    {{ method_field('PUT') }}
-    <div class="form-group">
-        <label for="title">{{ __('Title') }}</label>
-        <input id="title" type="text" class="form-control" name="title" value="{{ $post->title }}" required autofocus>
+
+    <h1>情報編集</h1>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <a href="/posts" class="btn btn-primary" style="margin:20px;">一覧に戻る</a>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="body">{{ __('Body') }}</label>
-        <textarea id="body" class="form-control" name="body" rows="8" required>{{ $post->body }}</textarea>
-    </div>
-    <button type="submit" name="submit" class="btn btn-success">{{ __('Submit') }}</button>
-</form>
-@endsection
+
+    <!-- form -->
+    <form method="post" action="/posts/update/{{$post->id}}">
+
+        <div class="form-group">
+            <label>名前</label>
+            <input type="text" name="title" value="{{ $post->title }}" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>E-Mail</label>
+            <input type="text" name="comment" value="{{ $post->comment }}" class="form-control">
+        </div>
+
+        <input type="hidden" name="_token" value="{{csrf_token()}}">
+
+        <input type="submit" value="更新" class="btn btn-primary">
+
+    </form>
+
+@stop
