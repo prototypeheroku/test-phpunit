@@ -96,7 +96,8 @@ class PostController extends Controller
         //return view('posts.edit')->with('post',$post);
 	
 	$post = DB::select('select * from posts where title = ?', [$title]);
-        return view('posts.edit', ['post' => $post]);
+        //return view('posts.edit', ['post' => $post]);
+	return view('posts.edit')->with('post',$post);
     }
 
 
