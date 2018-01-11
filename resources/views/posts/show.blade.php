@@ -1,38 +1,19 @@
-@php
-    $title = $post->title;
-@endphp
-@extends('layouts.my')
+@extends('layout')
+
 @section('content')
-<h1 id="post-title">{{ $title }}</h1>
 
-<!-- •ÒWEíœƒ{ƒ^ƒ“ -->
-<div class="edit">
-    <a href="{{ url('posts/'.$post->id.'/edit') }}" class="btn btn-primary">
-        {{ __('Edit') }}
-    </a>
-    @component('components.btn-del')
-        @slot('table', 'posts')
-        @slot('id', $post->id)
-    @endcomponent
-</div>
+    <h1>è©³ç´°è¡¨ç¤º</h1>
 
-<!-- ‹L–“à—e -->
-<dl class="row">
-    <dt class="col-md-2">{{ __('Created') }}:</dt>
-    <dd class="col-md-10">
-        <time itemprop="dateCreated" datetime="{{ $post->created_at }}">
-            {{ $post->created_at }}
-        </time>
-    </dd>
-    <dt class="col-md-2">{{ __('Updated') }}:</dt>
-    <dd class="col-md-10">
-        <time itemprop="dateModified" datetime="{{ $post->updated_at }}">
-            {{ $post->updated_at }}
-        </time>
-    </dd>
-</dl>
-<hr>
-<div id="post-body">
-    {{ $post->body }}
-</div>
-@endsection
+    <div class="row">
+        <div class="col-sm-12">
+            <a href="/posts" class="btn btn-primary" style="margin:20px;">ä¸€è¦§ã«æˆ»ã‚‹</a>
+        </div>
+    </div>
+
+    <!-- table -->
+    <table class="table table-striped">
+        <tr><td>ã‚³ãƒ¼ãƒ‰</td><td>{{$post->title}}</tr>
+        <tr><td>å†…å®¹</td><td>{{$post->comment}}</tr>
+    </table>
+
+@stop
