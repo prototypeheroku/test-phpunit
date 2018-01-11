@@ -38,7 +38,7 @@
                              <input type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
                          </div>
                          <div>
-                             <input type="text" name="_token" value="{{csrf_token()}}">
+                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                          </div>
                       </form>
                   </div>
