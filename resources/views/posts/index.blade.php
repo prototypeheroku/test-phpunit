@@ -40,7 +40,7 @@
         @endforeach 
         </tbody>
     </table>
-    
+{!! $posts->render() !!}
 @stop
 
 @section('script')
