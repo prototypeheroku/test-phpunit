@@ -10,10 +10,7 @@
         </div>
     </div>
 
-<form action="{{ url('posts/add') }}" method="post">
-    {{ csrf_field() }}
-    {{ method_field('POST') }}
-    
+<form action="{{ url('posts/add') }}" method="post">   
     
         <div class="form-group">
             <label>コード</label>
