@@ -32,7 +32,7 @@
 　　　　　　　　 </td>
                 <td>
                   <form method="post" action="/posts/destroy/{{$post->title}}">
-                    <input name="btn-destroy" type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
+                    <input type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
                   </form>
 　　　　　　　　 </td>
              </tr>
