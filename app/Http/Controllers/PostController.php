@@ -88,18 +88,14 @@ class PostController extends Controller
         return redirect('posts/');
     }
 	
-    public function edit($id)
+    public function edit($title)
     {
         //レコードを検索
         //$post = Post::find($id);
         //検索結果をビューに渡す
         //return view('posts.edit')->with('post',$post);
 	
-	$post = DB::select('select * from posts where title = ?', [$id]);
-	    
-        //$post = new Post;
-        //$post->title = "";
-        //$post->comment = "";
+	$post = DB::select('select * from posts where title = ?', [$title]);
         return view('posts.edit', ['post' => $post]);
     }
 
