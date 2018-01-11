@@ -99,12 +99,16 @@ class PostController extends Controller
     public function update(Request $request, $title)
     {
         //レコードを検索
-        $post = Post::find($title);
+        //$post = Post::find($title);
         //値を代入
-        $post->name = $request->title;
-        $post->email = $request->comment;
+        //$post->name = $request->title;
+        //$post->email = $request->comment;
         //保存（更新）
-        $post->save();
+        //$post->save();
+	    
+	// 更新    
+	DB::update('update posts set comment = ? where title = ?', [$request->comment,$request->title]);
+	    
         //リダイレクト
         return redirect()->to('/$posts');
     }
