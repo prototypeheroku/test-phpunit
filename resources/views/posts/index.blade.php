@@ -11,7 +11,7 @@
     </div>
 
     <!-- table -->
-    <table class="table table-striped" border="2">
+    <table class="table table-striped">
     
         <thead>
             <tr>
@@ -28,16 +28,22 @@
                 <td style="width:20%">{{ $post->title }}</td>
                 <td style="width:40%">{{ $post->comment }}</td>
                 <td>
-　　　　　　　　　　<a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">詳細</a>
-　　　　　　　　 </td>
-                <td>
-　　　　　　　　　　<a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
-　　　　　　　　 </td>
-                <td>
-                  <form method="post" action="/posts/destroy/{{$post->title}}">
-                    <input type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
-                    <input type="text" name="_token" value="{{csrf_token()}}">
-                  </form>
+　　　　　　　　　　<div>
+                      <a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">詳細</a>
+                  </div>
+                  <div>
+　　　　　　　　　　    <a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
+                  </div>
+                  <div>
+                      <form method="post" action="/posts/destroy/{{$post->title}}">
+                         <div>
+                             <input type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
+                         </div>
+                         <div>
+                             <input type="text" name="_token" value="{{csrf_token()}}">
+                         </div>
+                      </form>
+                  </div>
 　　　　　　　　 </td>
              </tr>
         @endforeach 
