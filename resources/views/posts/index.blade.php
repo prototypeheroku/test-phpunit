@@ -28,7 +28,7 @@
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->comment }}</td>
                 <td>
-　　　　　　　　　　<a href="/posts/modify/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
+　　　　　　　　　　<a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
 　　　　　　　　 </td>
                 <td>
                   <form method="post" action="/posts/delete/{{$post->title}}">
