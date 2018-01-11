@@ -78,15 +78,6 @@ class PostController extends Controller
 
         return view('posts.modify', ['post' => $post]);
     }
-
-    public function update(Request $request)
-    {
-        DB::table('posts')
-            ->where('title', $request->title)
-            ->update(['comment' => $request->comment]);
-
-        return redirect('posts/');
-    }
 	
     public function edit($title)
     {
