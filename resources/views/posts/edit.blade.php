@@ -15,12 +15,12 @@
 
         <div class="form-group">
             <label>名前</label>
-            <input type="text" name="title" value="{{ $post->title }}" class="form-control">
+            <input type="text" name="title" value="{{ $post->title }}" class="form-control" readonly>
         </div>
 
         <div class="form-group">
             <label>E-Mail</label>
-            <input type="text" name="comment" value="{{ $post->comment }}" class="form-control">
+            <input type="text" name="comment" value="{{ $post->comment }}" class="form-control" required autofocus>
         </div>
 
         <input type="hidden" name="_token" value="{{csrf_token()}}">
