@@ -24,10 +24,10 @@
         @foreach ($posts as $post)
             <tr>
                 <td style="width:20%">{{ $post->title }}</td>
-                <td style="width:40%">{{ $post->comment }}</td>
-                <td>
+                <td style="width:30%">{{ $post->comment }}</td>
+                <td style="width:10%">
                       <a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">詳細</a>
-                <td>
+                <td style="width:10%">
 　　　　　　　　　　    <a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
                 </td>
                 <td>
