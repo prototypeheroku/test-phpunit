@@ -20,3 +20,4 @@ Route::resource('posts', 'PostController');
 Route::post('posts/add', 'PostController@add');
 Route::get('posts/edit/{title}','PostController@edit');
 Route::post('posts/update/{title}','PostController@update');
+Route::post('posts/destroy/{title}','PostController@destroy');
