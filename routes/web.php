@@ -15,12 +15,8 @@ Route::get('/', function () {
 });
 Route::get('foo/foo2', 'FooController@foo2');
 Route::get('sample/search', 'SampleController@search');
-// ÉãÅ[Égí«â¡
+// ∆í‚Äπ¬Å[∆íg‚Äô√á‚Ä∞√Å
 Route::resource('posts', 'PostController');
 Route::post('posts/add', 'PostController@add');
-Route::post('posts/update', 'PostController@update');
-Route::post('posts/delete', 'PostController@delete');
-Route::get('posts/modify', 'UserController@modify');
-Route::get('posts/modify/{title}', function ($title) {
-    return $title;
-});
+Route::get('posts/edit/{id}','PostController@edit');
+Route::post('posts/update/{id}','PostController@update');
