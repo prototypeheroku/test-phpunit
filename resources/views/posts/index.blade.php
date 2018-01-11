@@ -18,6 +18,8 @@
                 <th>{{ __('コード') }}</th>
                 <th>{{ __('内容') }}</th>
                 <th>{{ __('') }}</th>
+                <th>{{ __('') }}</th>
+                <th>{{ __('') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -25,9 +27,9 @@
             <tr>
                 <td style="width:20%">{{ $post->title }}</td>
                 <td style="width:30%">{{ $post->comment }}</td>
-                <td style="width:10%">
+                <td>
                       <a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">詳細</a>
-                <td style="width:10%">
+                <td>
 　　　　　　　　　　    <a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
                 </td>
                 <td>
