@@ -36,7 +36,7 @@
                 <td>
                   <form method="post" action="/posts/destroy/{{$post->title}}">
                     <input type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
-                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                    <input type="text" name="_token" value="{{csrf_token()}}">
                   </form>
 　　　　　　　　 </td>
              </tr>
