@@ -29,8 +29,8 @@ class PostController extends Controller
     public function create()
     {
         $post = new Post;
-        $post->title = "";
-        $post->comment = "";
+        $post->title = "0001";
+        $post->comment = "テスト０００１";
         return view('posts.create', ['post' => $post]);
     }
 
