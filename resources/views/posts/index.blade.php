@@ -25,8 +25,8 @@
         <tbody>
         @foreach ($posts as $post)
             <tr>
-                <td>{{ $post->title }}</td>
-                <td>{{ $post->comment }}</td>
+                <td style="width:20%">{{ $post->title }}</td>
+                <td style="width:30%">{{ $post->comment }}</td>
                 <td>
 　　　　　　　　　　<a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">詳細</a>
 　　　　　　　　 </td>
