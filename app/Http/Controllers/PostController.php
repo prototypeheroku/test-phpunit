@@ -110,7 +110,7 @@ class PostController extends Controller
 	DB::update('update posts set comment = ? where title = ?', [$request->comment,$request->title]);
 	    
         //リダイレクト
-        return redirect()->to('/$posts');
+	return redirect()->to('/posts');
     }
 
 }
