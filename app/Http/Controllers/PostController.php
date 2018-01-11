@@ -87,45 +87,21 @@ class PostController extends Controller
 
         return redirect('posts/');
     }
-
-
-
-
-
-
-
-
-
-
-
-
-			
-
-
-
-    public function show(Post $post)
+	
+    public function edit($id)
     {
-        return view('posts.show', ['post' => $post]);
-    }
-
-    public function store(Request $request)
-    {
-        $post = new Post;
-        $post->title = $request->title;
-        $post->comment = $request->comment;
-        $post->save();
-        return redirect('posts/');
-    }
-
-    public function edit(Post $post)
-    {
+        //レコードを検索
+        //$post = Post::find($id);
+        //検索結果をビューに渡す
+        //return view('posts.edit')->with('post',$post);
+	
+	$post = DB::select('select * from posts where title = ?', [$id]);
+	    
+        //$post = new Post;
+        //$post->title = "";
+        //$post->comment = "";
         return view('posts.edit', ['post' => $post]);
     }
 
 
-    public function destroy(Post $post)
-    {
-        $post->delete();
-        return redirect('posts');
-    }
 }
