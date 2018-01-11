@@ -13,15 +13,17 @@ class PostController extends Controller
     public function index()
     {
         //$posts = Post::latest()->get();
-
-        //DB::table('posts')->insert(
-        //    ['title' => 'B001', 'comment' => 'testB001']
-        //);
-
         //$posts = DB::table('posts')->get();
-	$posts = DB::select('select * from posts order by title');
-
-        return view('posts.index', ['posts' => $posts]);
+	    
+	//$posts = DB::select('select * from posts order by title');
+        //return view('posts.index', ['posts' => $posts]);
+	    
+        $query = Post::query();
+        //全件取得
+        //$users = $query->get();
+        //ページネーション
+        $posts = $query->orderBy('title','desc')->paginate(5);
+        return view('posts.index')->with('posts',$posts);
     }
 
     public function create()
@@ -120,8 +122,6 @@ class PostController extends Controller
 	    
         //リダイレクト
 	return redirect()->to('/posts');
-	//$posts = DB::select('select * from posts order by title');
-        //return view('posts.index', ['posts' => $posts]);
     }
 
 }
