@@ -27,8 +27,10 @@
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->comment }}</td>
                 <td>
-　　　　　　　　　　<a href="{{ url('posts/modify/{'.$post->title.'}') }}" class="btn btn-primary btn-sm">編集</a>
-　　　　　　　　　　<a href="{{ url('posts/delete/') }}" class="btn btn-primary btn-sm">削除</a>
+　　　　　　　　　　<a href="/posts/modify/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
+                  <form method="post" action="/posts/delete/{{$post->title}}">
+                    <input type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
+                  </form>
 　　　　　　　　</td>
              </tr>
         @endforeach 
