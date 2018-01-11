@@ -14,7 +14,7 @@
     
         <div class="form-group">
             <label>コード</label>
-            <input type="text" name="title" value="{{ $post->title }}" class="form-control" readonly>
+            <input type="text" name="title" value="{{ $post->title }}" class="form-control" required autofocus>
         </div>
 
         <div class="form-group">
