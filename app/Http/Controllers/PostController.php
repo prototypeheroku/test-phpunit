@@ -63,22 +63,11 @@ class PostController extends Controller
 	//一覧にリダイレクト
         return redirect()->to('/posts');
     }
-
-    public function delete(Request $request)
+	
+    public function show($title)
     {
-        DB::table('posts')->where('title', '=', $request->title)->delete();
-
-        return redirect('posts/');
-    }
-
-
-    public function modify($title)
-    {
-        
-        //$posts = DB::table('posts')->get();
         $post = DB::table('posts')->where('title', $title)->first();
-
-        return view('posts.modify', ['post' => $post]);
+	return view('posts.show', ['post' => $post]);
     }
 	
     public function edit($title)
