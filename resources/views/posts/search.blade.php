@@ -1,1 +1,3 @@
-mmmm
+@extends('layout')
+
+@section('content')
