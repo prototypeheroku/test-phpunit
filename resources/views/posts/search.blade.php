@@ -4,7 +4,7 @@
 
 　　　　　　　　<h1>情報検索</h1>
 
-<form action="{{ url('posts/add') }}" method="post">
+<form>
 
         <div class="form-group">
             <label>コード</label>
