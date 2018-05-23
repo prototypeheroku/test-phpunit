@@ -23,15 +23,15 @@ class SampleController extends Controller
         //$users = $query->get();
         //ページネーション
         $posts = $query->orderBy('title','asc')->paginate(5);
-        return view('posts.index')->with('posts',$posts);
+        return view('sample.index')->with('posts',$posts);
     }
 
     public function create()
     {
-        $post = new Post;
+        $post = new Sample;
         $post->title = "0001";
         $post->comment = "テスト０００１";
-        return view('posts.create', ['post' => $post]);
+        return view('sample.create', ['post' => $post]);
     }
 
     public function add(Request $request)
@@ -61,13 +61,13 @@ class SampleController extends Controller
         //return redirect('posts/');
 	
 	//一覧にリダイレクト
-        return redirect()->to('/posts');
+        return redirect()->to('/sample');
     }
 	
     public function show($title)
     {
         $post = DB::table('posts')->where('title', $title)->first();
-	return view('posts.show', ['post' => $post]);
+	return view('sample.show', ['post' => $post]);
     }
 	
     public function edit($title)
@@ -82,7 +82,7 @@ class SampleController extends Controller
 	//$post = new Post;
         //$post->title = $postRs->title;
         //$post->comment = $postRs->comment;
-        return view('posts.edit', ['post' => $post]);
+        return view('sample.edit', ['post' => $post]);
         //return view('posts.edit', ['post' => $post]);
 	//return view('posts.edit')->with('post',$post);
     }
@@ -101,7 +101,7 @@ class SampleController extends Controller
 	DB::update('update posts set comment = ? where title = ?', [$request->comment,$request->title]);
 	    
         //リダイレクト
-	return redirect()->to('/posts');
+	return redirect()->to('/sample');
     }
 	
     public function destroy($title)
@@ -110,7 +110,7 @@ class SampleController extends Controller
 	DB::delete('delete from posts where title = ?', [$title]);
 	    
         //リダイレクト
-	return redirect()->to('/posts');
+	return redirect()->to('/sample');
     }
 
 }
