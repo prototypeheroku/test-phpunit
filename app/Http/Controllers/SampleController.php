@@ -18,7 +18,7 @@ class SampleController extends Controller
 	//$posts = DB::select('select * from posts order by title');
         //return view('posts.index', ['posts' => $posts]);
 	    
-        $query = Sample::query();
+        $query = Post::query();
         //全件取得
         //$users = $query->get();
         //ページネーション
