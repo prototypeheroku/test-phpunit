@@ -6,11 +6,11 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <a href="/posts" class="btn btn-primary" style="margin:20px;">一覧に戻る</a>
+            <a href="/sample" class="btn btn-primary" style="margin:20px;">一覧に戻る</a>
         </div>
     </div>
 
-<form action="{{ url('posts/add') }}" method="post">   
+<form action="{{ url('sample/add') }}" method="post">   
     
         <div class="form-group">
             <label>コード</label>
