@@ -6,7 +6,7 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <a href="/posts/create" class="btn btn-primary" style="margin:20px;">新規登録</a>
+            <a href="/sample/create" class="btn btn-primary" style="margin:20px;">新規登録</a>
         </div>
     </div>
 
@@ -28,12 +28,12 @@
                 <td style="width:20%">{{ $post->title }}</td>
                 <td style="width:30%">{{ $post->comment }}</td>
                 <td>
-                      <a href="/posts/show/{{$post->title}}" class="btn btn-primary btn-sm">詳細</a>
+                      <a href="/sample/show/{{$post->title}}" class="btn btn-primary btn-sm">詳細</a>
                 <td>
-　　　　　　　　　　    <a href="/posts/edit/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
+　　　　　　　　　　    <a href="/sample/edit/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
                 </td>
                 <td>
-                      <form method="post" action="/posts/destroy/{{$post->title}}">
+                      <form method="post" action="/sample/destroy/{{$post->title}}">
                          <div>
                              <input type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
                          </div>
