@@ -28,7 +28,7 @@ class SampleController extends Controller
 
     public function create()
     {
-        $post = new Sample;
+        $post = new Post;
         $post->title = "0001";
         $post->comment = "テスト０００１";
         return view('sample.create', ['post' => $post]);
