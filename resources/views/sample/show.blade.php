@@ -6,7 +6,7 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <a href="/posts" class="btn btn-primary" style="margin:20px;">一覧に戻る</a>
+            <a href="/sample" class="btn btn-primary" style="margin:20px;">一覧に戻る</a>
         </div>
     </div>
 
