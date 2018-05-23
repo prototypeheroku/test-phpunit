@@ -6,12 +6,12 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <a href="/posts" class="btn btn-primary" style="margin:20px;">一覧に戻る</a>
+            <a href="/sample" class="btn btn-primary" style="margin:20px;">一覧に戻る</a>
         </div>
     </div>
 
     <!-- form -->
-    <form method="post" action="/posts/update/{{$post->title}}">
+    <form method="post" action="/sample/update/{{$post->title}}">
 
         <div class="form-group">
             <label>名前</label>
