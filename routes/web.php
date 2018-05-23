@@ -23,3 +23,12 @@ Route::get('posts/edit/{title}','PostController@edit');
 Route::post('posts/update/{title}','PostController@update');
 Route::post('posts/destroy/{title}','PostController@destroy');
 Route::get('posts/show/{title}','PostController@show');
+
+// Sample画面
+Route::resource('sample', 'SampleController');
+Route::get('sample','SampleController@index');
+Route::post('sample/add', 'SampleController@add');
+Route::get('sample/edit/{title}','SampleController@edit');
+Route::post('sample/update/{title}','SampleController@update');
+Route::post('sample/destroy/{title}','SampleController@destroy');
+Route::get('sample/show/{title}','SampleController@show');
