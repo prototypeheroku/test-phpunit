@@ -10,7 +10,7 @@ use App\Http\Requests\StorePost;
 
 class PostController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
         //$posts = Post::latest()->get();
         //$posts = DB::table('posts')->get();
@@ -19,7 +19,7 @@ class PostController extends Controller
         //return view('posts.index', ['posts' => $posts]);
 	    
 	#キーワード受け取り
-        $keyword = $request->input('keyword');
+        
  
 	    
         $query = Post::query();
@@ -27,10 +27,7 @@ class PostController extends Controller
         //$users = $query->get();
 	    
 	  #もしキーワードがあったら
-  　　　　　　　　　　　　if(!empty($keyword))
- 　　　　　　　　　　　　　　{
-   　　　　　　　　　　　 $query->where('name','like','%'.$keyword.'%')->orWhere('mail','like','%'.$keyword.'%');
-  　　　　　　　　　　　　　}
+  　　　　　　　　　　　　
  
 	    
         //ページネーション
