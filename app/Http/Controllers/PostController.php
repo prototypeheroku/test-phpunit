@@ -10,13 +10,17 @@ use App\Http\Requests\StorePost;
 
 class PostController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         //$posts = Post::latest()->get();
         //$posts = DB::table('posts')->get();
 	    
 	//$posts = DB::select('select * from posts order by title');
         //return view('posts.index', ['posts' => $posts]);
+	    
+	#キーワード受け取り
+        $keyword = $request->input('keyword');
+ 
 	    
         $query = Post::query();
         //全件取得
