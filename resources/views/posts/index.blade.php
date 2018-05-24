@@ -12,7 +12,7 @@
     
     <!--↓↓ 検索フォーム ↓↓-->
     <div class="col-sm-4">
-    #<form class="form-inline" action="{{url('posts')}}" method="post">
+    <!-- <form class="form-inline" action="{{url('posts')}}" method="post"> -->
     <form class="form-inline">
       <div class="form-group">
       <input type="text" name="keyword" value="{{$keyword}}" class="form-control" placeholder="コードを入力してください">
