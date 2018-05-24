@@ -21,6 +21,14 @@ class PostController extends Controller
         $query = Post::query();
         //全件取得
         //$users = $query->get();
+	    
+	  #もしキーワードがあったら
+  　　　　　　　　　　　　if(!empty($keyword))
+ 　　　　　　　　　　　　　　{
+   　　　　　　　　　　　 $query->where('name','like','%'.$keyword.'%')->orWhere('mail','like','%'.$keyword.'%');
+  　　　　　　　　　　　　　}
+ 
+	    
         //ページネーション
         $posts = $query->orderBy('title','asc')->paginate(5);
         return view('posts.index')->with('posts',$posts);
