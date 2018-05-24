@@ -12,9 +12,9 @@
     
     <!--↓↓ 検索フォーム ↓↓-->
     <div class="col-sm-4" style="padding:20px 0; padding-left:0px;">
-    <form class="form-inline" action="{{url('/crud')}}">
+    <form class="form-inline" action="{{url('/posts')}}">
       <div class="form-group">
-      <input type="text" name="keyword" value="{{$keyword}}" class="form-control" placeholder="名前を入力してください">
+      <input type="text" name="keyword" value="{{$keyword}}" class="form-control" placeholder="コードを入力してください">
       </div>
     <input type="submit" value="検索" class="btn btn-info">
     </form>
