@@ -18,16 +18,14 @@ class PostController extends Controller
 	//$posts = DB::select('select * from posts order by title');
         //return view('posts.index', ['posts' => $posts]);
 	    
-	#キーワード受け取り
-        
+	
  
 	    
         $query = Post::query();
         //全件取得
         //$users = $query->get();
 	    
-	  #もしキーワードがあったら
-  　　　　　　　　　　　　
+	 
  
 	    
         //ページネーション
