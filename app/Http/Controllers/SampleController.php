@@ -24,7 +24,7 @@ class SampleController extends Controller
 	    
 	$query = DB::select('select title,comment from posts where title = ?', [$key1]);
 	    
-        $query = Post::query();
+        //$query = Post::query();
         //全件取得
         //$users = $query->get();
         //ページネーション
