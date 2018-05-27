@@ -16,13 +16,13 @@ class SampleController extends Controller
         return view('sample.search');
     }
 	
-    public function index()
+    public function index(Request $request)
     {
-        //$posts = Post::latest()->get();
-        //$posts = DB::table('posts')->get();
+	$key1 = $request->input('key1');
+        $key2 = $request->input('key2');
+        $key3 = $request->input('key3');
 	    
-	//$posts = DB::select('select * from posts order by title');
-        //return view('posts.index', ['posts' => $posts]);
+	$query = DB::select('select title,comment from posts where title = ?', [$key1]);
 	    
         $query = Post::query();
         //全件取得
