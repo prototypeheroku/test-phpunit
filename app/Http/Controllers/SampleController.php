@@ -22,7 +22,7 @@ class SampleController extends Controller
 	$query = DB::select('select colkey1,col1,col2 from sample where colkey1 = ?', [$request->colkey1]);
 	    
         //ページネーション
-        $samples = $query->orderBy('colkey1','asc')->paginate(5);
+        //$samples = $query->orderBy('colkey1','asc')->paginate(5);
 	
 	//検索結果を表示
         return view('sample.index')->with('samples',$samples);
