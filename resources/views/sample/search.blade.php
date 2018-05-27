@@ -24,7 +24,7 @@
         
         <input type="hidden" name="_token" value="{{csrf_token()}}">
 
-        <input type="submit" value="検索" class="btn btn-default btn-lg">
+        <input type="submit" value="検索" class="btn btn-primary">
         
 　　</form>
 
