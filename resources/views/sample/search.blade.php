@@ -19,7 +19,7 @@
         </div>
         <div class="form-group">
             <label>名称</label>
-            <input type="text" name="col2" value="222" class="form-control" required autofocus>
+            <input type="text" name="col2" value="名称０００１" class="form-control" required autofocus>
         </div>
         
         <input type="hidden" name="_token" value="{{csrf_token()}}">
