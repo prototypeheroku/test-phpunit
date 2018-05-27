@@ -13,8 +13,8 @@
             <label>種類</label>
             <select name="col1" id="col1" class="form-control">
             <option value="who">--- 選択なし ---</option>
-            <option value="01">種類１</option>
-            <option value="02">種類２</option>
+            <option value="種類１">種類１</option>
+            <option value="種類２">種類２</option>
             </select>
         </div>
         <div class="form-group">
