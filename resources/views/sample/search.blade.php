@@ -23,11 +23,10 @@
         </div>
         
         <input type="hidden" name="_token" value="{{csrf_token()}}">
-        
-        <input type="submit" value="検索" class="btn btn-default btn-lg">
+
         <p>
-          <button type="button" class="btn btn-primary btn-lg">Large button</button>
-          <button type="button" class="btn btn-default btn-lg">Large button</button>
+          <input type="submit" value="検索" class="btn btn-default btn-lg">
+          <button type="button" class="btn btn-primary btn-lg">検索</button>
         </p>
 　　</form>
 
