@@ -18,13 +18,13 @@ class SampleController extends Controller
 	
     public function index(Request $request)
     {
-	$query = DB::select('select colkey,col1,col2 from sample where colkey = ?', [$request->colkey]);
+	//検索結果を取得
+	$query = DB::select('select colkey1,col1,col2 from sample where colkey1 = ?', [$request->colkey1]);
 	    
-        //$query = Post::query();
-        //全件取得
-        //$users = $query->get();
         //ページネーション
-        $samples = $query->orderBy('title','asc')->paginate(5);
+        $samples = $query->orderBy('colkey1','asc')->paginate(5);
+	
+	//検索結果を表示
         return view('sample.index')->with('samples',$samples);
     }
 
