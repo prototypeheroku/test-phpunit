@@ -23,17 +23,18 @@
             </tr>
         </thead>
         <tbody>
-        @foreach ($posts as $post)
+        @foreach ($samples as $sample)
             <tr>
-                <td style="width:20%">{{ $post->title }}</td>
-                <td style="width:30%">{{ $post->comment }}</td>
+                <td style="width:20%">{{ $sample->colkey }}</td>
+                <td style="width:30%">{{ $sample->col1 }}</td>
+                <td style="width:30%">{{ $sample->col2 }}</td>
                 <td>
-                      <a href="/sample/show/{{$post->title}}" class="btn btn-primary btn-sm">詳細</a>
+                      <a href="/sample/show/{{$sample->colkey}}" class="btn btn-primary btn-sm">詳細</a>
                 <td>
-　　　　　　　　　　    <a href="/sample/edit/{{$post->title}}" class="btn btn-primary btn-sm">編集</a>
+　　　　　　　　　　    <a href="/sample/edit/{{$sample->colkey}}" class="btn btn-primary btn-sm">編集</a>
                 </td>
                 <td>
-                      <form method="post" action="/sample/destroy/{{$post->title}}">
+                      <form method="post" action="/sample/destroy/{{$sample->colkey}}">
                          <div>
                              <input type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
                          </div>
