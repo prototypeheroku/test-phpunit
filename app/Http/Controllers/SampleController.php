@@ -13,9 +13,7 @@ class SampleController extends Controller
 	
     public function search()
     {
-        //return view('sample.search');
-	//リダイレクト
-	return redirect()->to('/sample');
+        return view('sample.search');
     }
 	
     public function index()
