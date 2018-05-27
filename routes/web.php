@@ -26,7 +26,8 @@ Route::get('posts/show/{title}','PostController@show');
 
 // Sample画面
 Route::resource('sample', 'SampleController');
-Route::get('sample','SampleController@index');
+Route::get('sample','SampleController@search');
+Route::get('sample/search/{key1,key2}','SampleController@index');
 Route::post('sample/add', 'SampleController@add');
 Route::get('sample/edit/{title}','SampleController@edit');
 Route::post('sample/update/{title}','SampleController@update');
