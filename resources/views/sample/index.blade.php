@@ -26,7 +26,7 @@
         <tbody>
         @foreach ($samples as $sample)
             <tr>
-                <td style="width:20%">{{ $sample->colkey }}</td>
+                <td style="width:20%">{{ $sample->colkey1 }}</td>
                 <td style="width:30%">{{ $sample->col1 }}</td>
                 <td style="width:30%">{{ $sample->col2 }}</td>
                 <td>
