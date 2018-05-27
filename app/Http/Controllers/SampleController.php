@@ -10,6 +10,14 @@ use App\Http\Requests\StorePost;
 
 class SampleController extends Controller
 {
+	
+    public function search()
+    {
+        //return view('sample.search');
+	//リダイレクト
+	return redirect()->to('/sample');
+    }
+	
     public function index()
     {
         //$posts = Post::latest()->get();
