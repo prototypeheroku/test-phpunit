@@ -30,12 +30,12 @@
                 <td style="width:30%">{{ $sample->col1 }}</td>
                 <td style="width:30%">{{ $sample->col2 }}</td>
                 <td>
-                      <a href="/sample/show/{{$sample->colkey}}" class="btn btn-primary btn-sm">詳細</a>
+                      <a href="/sample/show/{{$sample->colkey1}}" class="btn btn-primary btn-sm">詳細</a>
                 <td>
-　　　　　　　　　　    <a href="/sample/edit/{{$sample->colkey}}" class="btn btn-primary btn-sm">編集</a>
+　　　　　　　　　　    <a href="/sample/edit/{{$sample->colkey1}}" class="btn btn-primary btn-sm">編集</a>
                 </td>
                 <td>
-                      <form method="post" action="/sample/destroy/{{$sample->colkey}}">
+                      <form method="post" action="/sample/destroy/{{$sample->colkey1}}">
                          <div>
                              <input type="submit" value="削除" class="btn btn-danger btn-sm btn-destroy">
                          </div>
@@ -48,7 +48,7 @@
         @endforeach 
         </tbody>
     </table>
-{!! $posts->render() !!}
+{!! $samples->render() !!}
     
 <div class="row">
     <div class="col-sm-12">
