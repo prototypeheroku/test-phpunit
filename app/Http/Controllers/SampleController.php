@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Post;
+use App\Sample;
 use App\Http\Requests\StorePost;
 
 class SampleController extends Controller
