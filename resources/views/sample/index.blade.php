@@ -19,6 +19,7 @@
                 <th>{{ __('種類') }}</th>
                 <th>{{ __('名称') }}</th>
                 <th>{{ __('') }}</th>
+                <th>{{ __('') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -29,6 +30,8 @@
                 <td style="width:30%">{{ $sample->col2 }}</td>
                 <td>
                       <a href="/sample/show/{{$sample->colkey1}}" class="btn btn-primary btn-sm">詳細</a>
+                </td>
+                <td>
 　　　　　　　　　　    <a href="/sample/edit/{{$sample->colkey1}}" class="btn btn-primary btn-sm">編集</a>
                 </td>
              </tr>
