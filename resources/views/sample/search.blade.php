@@ -8,12 +8,12 @@
     
         <div class="form-group">
             <label>コード</label>
-            <input type="text" name="title" value="" class="form-control" required autofocus>
+            <input type="text" name="title" value="111" class="form-control" required autofocus>
         </div>
 
         <div class="form-group">
             <label>内容</label>
-            <input type="text" name="comment" value="" class="form-control" required autofocus>
+            <input type="text" name="comment" value="222" class="form-control" required autofocus>
         </div>
         
         <input type="hidden" name="_token" value="{{csrf_token()}}">
