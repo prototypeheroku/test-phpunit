@@ -21,16 +21,28 @@ class SampleController extends Controller
     {
 	$colkey1 = $request->colkey1;
 	$col1 = $request->col1;
+	$col2 = $request->col2;
 	//検索結果を取得
-	$samples = Sample::where('colkey1', 'LIKE', "%$colkey1%")
-		->orWhere('col1', 'LIKE', "%$col1%")
-		->orderBy('colkey1','asc')->paginate(5);
+	//$samples = Sample::where('colkey1', 'LIKE', "%$colkey1%")
+	//	->orWhere('col1', 'LIKE', "%$col1%")
+	//	->orderBy('colkey1','asc')->paginate(5);
 	    
+	$query = Sample::query();
+        // 検索するテキストが入力されている場合のみ
+        if(!empty($colkey1)) {
+            $query->where('colkey1', 'like', '%'.$colkey1.'%');
+        }
+        if(!empty($col1)) {
+            $query->where('col1', 'like', '%'.$col1.'%');
+        }
+        if(!empty($col2)) {
+            $query->where('col2', 'like', '%'.$col2.'%');
+        }	    
         //ページネーション
-        //$samples = $query->orderBy('colkey1','asc')->paginate(5);
+        $data = $query->paginate(3);
 	
 	//検索結果を表示
-        return view('sample.index')->with('samples',$samples);
+        return view('sample.index')->with('samples',$data);
     }
 
     public function create()
