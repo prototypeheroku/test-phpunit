@@ -20,8 +20,8 @@ class SampleController extends Controller
     {
 	//検索結果を取得
 	//$query = DB::select('select colkey1,col1,col2 from sample where colkey1 = ?', [$request->colkey1]);
-	$query = DB::select('select * from sample ');
-	//$query = Sample::query();
+	//$query = DB::select('select * from sample ');
+	$query = Sample::query();
 	    
         //ページネーション
         $samples = $query->orderBy('colkey1','asc')->paginate(5);
