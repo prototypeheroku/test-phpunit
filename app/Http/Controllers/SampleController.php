@@ -21,14 +21,15 @@ class SampleController extends Controller
     {
 	//検索結果を取得
 	$query = DB::select('select colkey1,col1,col2 from sample where colkey1 = ?', [$request->colkey1]);
+	return view('sample.index')->with('samples',$query);
 	//$query = DB::select('select * from sample ');
 	//$query = Sample::query();
 	    
         //ページネーション
-        $samples = $query->orderBy('colkey1','asc')->paginate(5);
+        //$samples = $query->orderBy('colkey1','asc')->paginate(5);
 	
 	//検索結果を表示
-        return view('sample.index')->with('samples',$samples);
+        //return view('sample.index')->with('samples',$samples);
     }
 
     public function create()
