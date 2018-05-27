@@ -7,7 +7,7 @@
     <form action="{{ url('sample/search') }}" method="post">  
         <div class="form-group">
             <label>コード</label>
-            <input type="text" name="key1" value="111" class="form-control" required autofocus>
+            <input type="text" name="key1" value="0001" class="form-control" required autofocus>
         </div>
         <div class="form-group">
             <label>種類</label>
