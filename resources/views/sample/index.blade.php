@@ -29,10 +29,8 @@
                 <td style="width:30%">{{ $sample->col1 }}</td>
                 <td style="width:30%">{{ $sample->col2 }}</td>
                 <td>
-                      <a href="/sample/show/{{$sample->colkey1}}" class="btn btn-primary btn-sm">詳細</a>
-                </td>
-                <td>
-　　　　　　　　　　    <a href="/sample/edit/{{$sample->colkey1}}" class="btn btn-primary btn-sm">編集</a>
+                      <a href="/sample/show/{{$sample->colkey1}}" class="btn btn-link">詳細</a>
+　　　　　　　　　　    <a href="/sample/edit/{{$sample->colkey1}}" class="btn btn-link">編集</a>
                 </td>
              </tr>
         @endforeach 
