@@ -7,11 +7,11 @@
     <form action="{{ url('sample/search') }}" method="post">  
         <div class="form-group">
             <label>コード</label>
-            <input type="text" name="key1" value="0001" class="form-control" required autofocus>
+            <input type="text" name="colkey1" value="0001" class="form-control" required autofocus>
         </div>
         <div class="form-group">
             <label>種類</label>
-            <select name="key2" id="key2" class="form-control">
+            <select name="col1" id="col1" class="form-control">
             <option value="who">--- 選択なし ---</option>
             <option value="01">種類１</option>
             <option value="02">種類２</option>
@@ -19,7 +19,7 @@
         </div>
         <div class="form-group">
             <label>名称</label>
-            <input type="text" name="key3" value="222" class="form-control" required autofocus>
+            <input type="text" name="col2" value="222" class="form-control" required autofocus>
         </div>
         
         <input type="hidden" name="_token" value="{{csrf_token()}}">
