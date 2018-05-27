@@ -2,11 +2,11 @@
 
 @section('content')
 
-    <h1>一覧表示</h1>
+    <h1>検索結果</h1>
     
     <div class="row">
         <div class="col-sm-12">
-            <a href="/sample/create" class="btn btn-primary" style="margin:20px;">新規登録</a>
+            <a href="/sample/create" class="btn btn-primary" style="margin:20px;">追加</a>
         </div>
     </div>
 
