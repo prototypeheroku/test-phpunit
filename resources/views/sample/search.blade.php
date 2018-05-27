@@ -7,7 +7,7 @@
     <form action="{{ url('sample/search') }}" method="post">  
         <div class="form-group">
             <label>コード</label>
-            <input type="text" name="colkey1" value="0001" class="form-control" required autofocus>
+            <input type="text" name="colkey1" value="0001" class="form-control" >
         </div>
         <div class="form-group">
             <label>種類</label>
@@ -19,7 +19,7 @@
         </div>
         <div class="form-group">
             <label>名称</label>
-            <input type="text" name="col2" value="名称０００１" class="form-control" required autofocus>
+            <input type="text" name="col2" value="名称０００１" class="form-control" >
         </div>
         
         <input type="hidden" name="_token" value="{{csrf_token()}}">
