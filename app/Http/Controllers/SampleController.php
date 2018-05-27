@@ -19,10 +19,12 @@ class SampleController extends Controller
 	
     public function index(Request $request)
     {
-	//$query = Request::get('colkey1');
-	$query = $request->colkey1;
+	$colkey1 = $request->colkey1;
+	$col1 = $request->col1;
 	//検索結果を取得
-	$samples = Sample::where('colkey1', 'LIKE', "%$query%")->orderBy('colkey1','asc')->paginate(5);
+	$samples = Sample::where('colkey1', 'LIKE', "%$colkey1%")
+		->orWhere('col1', 'LIKE', "%$col1%")
+		->orderBy('colkey1','asc')->paginate(5);
 	    
         //ページネーション
         //$samples = $query->orderBy('colkey1','asc')->paginate(5);
