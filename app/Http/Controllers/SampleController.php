@@ -18,18 +18,14 @@ class SampleController extends Controller
 	
     public function index(Request $request)
     {
-	$key1 = $request->input('key1');
-        $key2 = $request->input('key2');
-        $key3 = $request->input('key3');
-	    
-	$query = DB::select('select title,comment from posts where title = ?', [$key1]);
+	$query = DB::select('select colkey,col1,col2 from sample where colkey = ?', [$request->colkey]);
 	    
         //$query = Post::query();
         //全件取得
         //$users = $query->get();
         //ページネーション
-        $posts = $query->orderBy('title','asc')->paginate(5);
-        return view('sample.index')->with('posts',$posts);
+        $samples = $query->orderBy('title','asc')->paginate(5);
+        return view('sample.index')->with('samples',$samples);
     }
 
     public function create()
