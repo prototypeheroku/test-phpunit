@@ -15,7 +15,9 @@
             <label>内容</label>
             <input type="text" name="comment" value="" class="form-control" required autofocus>
         </div>
-
+        
+        <input type="hidden" name="_token" value="{{csrf_token()}}">
+        
         <input type="submit" value="検索" class="btn btn-primary">
 　　</form>
 
