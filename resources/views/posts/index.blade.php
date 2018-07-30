@@ -2,6 +2,10 @@
 
 @section('content')
 
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+	rel="stylesheet">
+
     <h1>一覧表示</h1>
 
     <div class="row">
