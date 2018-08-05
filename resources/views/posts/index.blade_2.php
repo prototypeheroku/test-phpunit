@@ -8,6 +8,39 @@
 
     <h1>一覧表示</h1>
 
+　　　　　　　　<p class="text-left" style="font-size: 15pt; font-weight: bold; padding-left: 20px; border-left: 6px solid #337ab7; margin-top:30px">災害一覧画面</p>
+		<div style="border: 1px solid #bfbfbf; padding: 10px">
+			<form class="form-horizontal">
+				<table class="table text-left" style="border-collapse: collapse">
+					<tr style="border-top-style: hidden; border-bottom-style: hidden">
+						<td style="padding: 0px; height: 50px">
+							<div class="form-group" style="padding: 0px; margin: 0px">
+								<div class="col-xs-4">
+									<label for="disastername" class="control-label">災害名</label>
+								</div>
+								<div class="col-xs-8">
+									<select id="disastername" class="form-control">
+										<option>選択してください</option>
+										<option value="001">○○災害</option>
+										<option value="002">☓☓災害</option>
+										<option value="003">△△災害</option>
+									</select>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<div class="row">
+					<div class="col-xs-4"></div>
+					<div class="col-xs-4">
+						<input class="btn btn-primary btn-lg btn-block" type="button"
+							value="検索">
+					</div>
+					<div class="col-xs-4"></div>
+				</div>
+			</form>
+		</div>
+
     <div class="row">
         <div class="col-sm-12">
             <a href="/posts/create" class="btn btn-primary" style="margin:20px;">新規登録</a>
