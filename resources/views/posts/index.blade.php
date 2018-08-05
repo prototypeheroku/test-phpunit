@@ -19,12 +19,7 @@
 									<label for="disastername" class="control-label">災害名</label>
 								</div>
 								<div class="col-xs-8">
-									<select id="disastername" class="form-control">
-										<option>選択してください</option>
-										<option value="001">○○災害</option>
-										<option value="002">☓☓災害</option>
-										<option value="003">△△災害</option>
-									</select>
+									<input type="text" name="keyword" class="form-control" placeholder="コードを入力してください">
 								</div>
 							</div>
 						</td>
@@ -33,7 +28,7 @@
 				<div class="row">
 					<div class="col-xs-4"></div>
 					<div class="col-xs-4">
-						<input class="btn btn-primary btn-lg btn-block" type="button"
+						<input type="submit" class="btn btn-primary btn-lg btn-block" type="button"
 							value="検索">
 					</div>
 					<div class="col-xs-4"></div>
