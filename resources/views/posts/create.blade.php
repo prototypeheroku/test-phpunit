@@ -26,7 +26,7 @@
 			</tbody>
 		</table>
 		<p class="text-left" style="font-size: 15pt; font-weight: bold; padding-left: 20px; border-left: 6px solid #337ab7; margin-top:30px">災害追加画面（1/2）</p>
-		<form class="form-horizontal">
+		<form action="{{ url('posts/add') }}" method="post" class="form-horizontal">
 			<div class="form-group">
 				<div class="row">
 					<div class="col-xs-2"></div>
