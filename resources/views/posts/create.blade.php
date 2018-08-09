@@ -43,7 +43,7 @@
 				<div class="row">
 					<div class="col-xs-2"></div>
 					<div class="col-xs-2 text-left">
-						<label for="disasterheadname" class="control-label">災害本部名（必須）</label>
+						<label for="disasterheadname" class="control-label">災害種別</label>
 					</div>
 					<div class="col-xs-4">
 						<input type="text" name="comment" value="{{ $post->comment }}" class="form-control" required autofocus>
@@ -51,24 +51,7 @@
 					<div class="col-xs-3"></div>
 				</div>
 			</div>
-			<div class="form-group">
-				<div class="row">
-					<div class="col-xs-2"></div>
-					<div class="col-xs-2 text-left">
-						<label for="template" class="control-label">フローテンプレート選択</label>
-					</div>
-					<div class="col-xs-4">
-						<select id="template" class="form-control">
-							<option>選択してください</option>
-							<option value="001">地震・水災</option>
-							<option value="002">○○災害</option>
-							<option value="003">☓☓災害</option>
-						</select>
-					</div>
-					<div class="col-xs-4"></div>
-				</div>
-			</div>
-			<input type="submit" value="登録" class="btn btn-primary btn-lg col-xs-2">
+			<input type="submit" value="登録" class="btn btn-primary">
 		</form>
 	</div>
 </body>
