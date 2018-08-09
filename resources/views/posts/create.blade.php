@@ -34,7 +34,7 @@
 						<label for="disastername" class="control-label">災害名（必須）</label>
 					</div>
 					<div class="col-xs-4">
-						<input type="text" name="title" value="{{ $post->title }}" class="form-control" placeholder=""　required autofocus>
+						<input type="text" value="{{ $post->title }}" class="form-control" placeholder=""　required autofocus>
 					</div>
 					<div class="col-xs-4"></div>
 				</div>
