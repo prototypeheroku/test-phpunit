@@ -68,7 +68,7 @@
 					<div class="col-xs-4"></div>
 				</div>
 			</div>
-			<input type="submit" value="登録" class="btn btn-primary">
+			<input type="submit" value="登録" class="btn btn-primary btn-lg col-xs-2">
 		</form>
 	</div>
 </body>
