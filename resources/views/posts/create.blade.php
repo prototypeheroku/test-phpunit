@@ -46,15 +46,7 @@
 						<label for="disasterheadname" class="control-label">災害本部名（必須）</label>
 					</div>
 					<div class="col-xs-4">
-						<select id="disasterheadname" class="form-control">
-							<option>選択してください</option>
-							<option value="001">○○本部</option>
-							<option value="002">☓☓本部</option>
-							<option value="003">△△本部</option>
-						</select>
-					</div>
-					<div class="col-xs-1">
-						<button class="btn btn-primary">追加</button>
+						<input type="text" name="comment" value="{{ $post->comment }}" class="form-control" required autofocus>
 					</div>
 					<div class="col-xs-3"></div>
 				</div>
