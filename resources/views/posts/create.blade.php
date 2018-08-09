@@ -34,7 +34,7 @@
 						<label for="disastername" class="control-label">災害名（必須）</label>
 					</div>
 					<div class="col-xs-4">
-						<input type="text" name="title" value="{{ $post->title }}" class="form-control" required autofocus>
+						<input type="text" name="title" value="{{ $post->title }}" class="form-control" placeholder=""　required autofocus>
 					</div>
 					<div class="col-xs-4"></div>
 				</div>
@@ -46,7 +46,7 @@
 						<label for="disasterheadname" class="control-label">災害種別</label>
 					</div>
 					<div class="col-xs-4">
-						<input type="text" name="comment" value="{{ $post->comment }}" class="form-control" required autofocus>
+						<input type="text" name="comment" value="{{ $post->comment }}" class="form-control" placeholder=""　required autofocus>
 					</div>
 					<div class="col-xs-3"></div>
 				</div>
