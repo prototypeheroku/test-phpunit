@@ -34,7 +34,7 @@
 						<label for="disastername" class="control-label">災害名（必須）</label>
 					</div>
 					<div class="col-xs-4">
-						<input type="text" name="title" value="{{ $post->title }}" class="form-control" required autofocus>
+						<input type="text" id="disastername" class="form-control">
 					</div>
 					<div class="col-xs-4"></div>
 				</div>
@@ -46,7 +46,12 @@
 						<label for="disasterheadname" class="control-label">災害本部名（必須）</label>
 					</div>
 					<div class="col-xs-4">
-						<input type="text" name="comment" value="{{ $post->comment }}" class="form-control" required autofocus>ue="003">△△本部</option>
+						<select id="disasterheadname" class="form-control">
+							<option>選択してください</option>
+							<option value="001">○○本部</option>
+							<option value="002">☓☓本部</option>
+							<option value="003">△△本部</option>
+						</select>
 					</div>
 					<div class="col-xs-1">
 						<button class="btn btn-primary">追加</button>
@@ -73,7 +78,13 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-3"></div>
-				<input type="submit" class="btn btn-primary btn-lg col-xs-2" style="margin-right: 10px; margin-left: 10px" type="button" value="登録" onclick="location.href='./DisasterList.html'">
+				<div class="col-xs-3">
+					<input class="btn btn-primary btn-lg col-xs-12" type="button" value="次へ" onclick="location.href='./Entry2.html'">
+					<p>※フローの詳細を確認します。</p>
+				</div>
+				<div class="col-xs-3">
+					<input class="btn btn-primary btn-lg col-xs-12" type="button" value="キャンセル" onclick="location.href='./DisasterList.html'">
+				</div>
 			</div>
 			<div class="col-xs-3"></div>
 		</form>
