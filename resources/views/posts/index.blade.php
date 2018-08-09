@@ -19,7 +19,7 @@
 									<label for="disastername" class="control-label">災害名</label>
 								</div>
 								<div class="col-xs-8">
-									<input type="text" name="keyword" class="form-control" placeholder="コードを入力してください">
+									<input type="text" name="keyword" class="form-control" placeholder="">
 								</div>
 							</div>
 						</td>
@@ -42,7 +42,7 @@
         </div>
     </div>
     
-    <!--↓↓ 検索フォーム ↓↓-->
+    <!--↓↓ 検索フォーム
     <div class="col-sm-4" style="padding:20px 0; padding-left:0px;">
     <form class="form-inline">
       <div class="form-group">
@@ -51,7 +51,7 @@
     <input type="submit" value="検索" class="btn btn-info">
     </form>
     </div>
-    <!--↑↑ 検索フォーム ↑↑-->
+    ↑↑ 検索フォーム ↑↑-->
 
     <!-- table -->
     <table class="table table-striped">
