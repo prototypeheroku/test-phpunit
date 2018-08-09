@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>災害登録1/2</title>
+<title>災害登録</title>
 <link
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -34,7 +34,7 @@
 						<label for="disastername" class="control-label">災害名（必須）</label>
 					</div>
 					<div class="col-xs-4">
-						<input type="text" value="{{ $post->title }}" class="form-control" placeholder=""　required autofocus>
+						<input type="text" name="title" value="{{ $post->title }}" class="form-control" placeholder=""　required autofocus>
 					</div>
 					<div class="col-xs-4"></div>
 				</div>
