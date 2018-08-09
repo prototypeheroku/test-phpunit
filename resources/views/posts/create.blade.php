@@ -68,17 +68,7 @@
 					<div class="col-xs-4"></div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-xs-3"></div>
-				<div class="col-xs-3">
-					<input class="btn btn-primary btn-lg col-xs-12" type="button" value="次へ" onclick="location.href='./Entry2.html'">
-					<p>※フローの詳細を確認します。</p>
-				</div>
-				<div class="col-xs-3">
-					<input class="btn btn-primary btn-lg col-xs-12" type="button" value="キャンセル" onclick="location.href='./DisasterList.html'">
-				</div>
-			</div>
-			<div class="col-xs-3"></div>
+			<input type="submit" value="登録" class="btn btn-primary">
 		</form>
 	</div>
 </body>
