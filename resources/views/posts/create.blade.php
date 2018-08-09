@@ -25,7 +25,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<p class="text-left" style="font-size: 15pt; font-weight: bold; padding-left: 20px; border-left: 6px solid #337ab7; margin-top:30px">災害追加画面（1/2）</p>
+		<p class="text-left" style="font-size: 15pt; font-weight: bold; padding-left: 20px; border-left: 6px solid #337ab7; margin-top:30px">災害追加画面</p>
 		<form action="{{ url('posts/add') }}" method="post" class="form-horizontal">
 			<div class="form-group">
 				<div class="row">
@@ -52,6 +52,11 @@
 				</div>
 			</div>
 			<input type="submit" value="登録" class="btn btn-primary">
+			<div class="row">
+                           <div class="col-sm-12">
+                              <a href="/posts" class="btn btn-primary" style="margin:20px;">一覧に戻る</a>
+                           </div>
+                        </div>
 		</form>
 	</div>
 </body>
