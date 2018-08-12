@@ -51,6 +51,9 @@
 					<div class="col-xs-3"></div>
 				</div>
 			</div>
+			
+			<input type="hidden" name="_token" value="{{csrf_token()}}">
+			
 			<input type="submit" value="登録" class="btn btn-primary">
 			<div class="row">
                            <div class="col-sm-12">
