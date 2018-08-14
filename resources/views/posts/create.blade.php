@@ -43,7 +43,7 @@
 				<div class="row">
 					<div class="col-xs-2"></div>
 					<div class="col-xs-2 text-left">
-						<label for="disasterheadname" class="control-label">災害種別</label>
+						<label for="disasterkind" class="control-label">災害種別</label>
 					</div>
 					<div class="col-xs-4">
 						<input type="text" name="disaster_kind" value="{{ $post->disaster_kind }}" class="form-control" placeholder=""　required autofocus>
@@ -55,7 +55,7 @@
 				<div class="row">
 					<div class="col-xs-2"></div>
 					<div class="col-xs-2 text-left">
-						<label for="disasterheadarea" class="control-label">災害地域</label>
+						<label for="disasterarea" class="control-label">災害地域</label>
 					</div>
 					<div class="col-xs-4">
 						<input type="text" name="disaster_area" value="{{ $post->disaster_area }}" class="form-control" placeholder=""　required autofocus>
