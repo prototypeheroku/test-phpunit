@@ -13,7 +13,7 @@ class PostController extends Controller
     public function index()
     {
         //$posts = Post::latest()->get();
-        //$posts = DB::table('posts')->get();
+        $posts = DB::table('disaster')->get();
 	    
 	//$posts = DB::select('select * from posts order by title');
         //return view('posts.index', ['posts' => $posts]);
@@ -30,7 +30,7 @@ class PostController extends Controller
 	    
         //ページネーション
         //$posts = $query->orderBy('disaster_name','asc')->paginate(5);
-        return view('posts.index')->with('posts',$query);
+        return view('posts.index')->with('posts',$posts);
     }
 
     public function create()
