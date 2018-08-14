@@ -54,7 +54,7 @@ class PostController extends Controller
 	    
 	    
 	// 追加
-        DB::table('posts')->insert(
+        DB::table('disaster')->insert(
             ['disaster_name' => $request->disaster_name, 'disaster_kind' => $request->disaster_kind, 'disaster_area' => $request->disaster_area]
         );
 	
@@ -79,7 +79,7 @@ class PostController extends Controller
 	
     public function show($disaster_name)
     {
-        $post = DB::table('posts')->where('disaster_name', $disaster_name)->first();
+        $post = DB::table('disaster')->where('disaster_name', $disaster_name)->first();
 	return view('posts.show', ['post' => $post]);
     }
 	
@@ -91,7 +91,7 @@ class PostController extends Controller
         //return view('posts.edit')->with('post',$post);
 	
 	//$postRs = DB::select('select title,comment from posts where title = ?', [$title]);
-	$post = DB::table('posts')->where('disaster_name', $disaster_name)->first();
+	$post = DB::table('disaster')->where('disaster_name', $disaster_name)->first();
 	//$post = new Post;
         //$post->title = $postRs->title;
         //$post->comment = $postRs->comment;
@@ -111,7 +111,7 @@ class PostController extends Controller
         //$post->save();
 	    
 	// 更新    
-	DB::update('update posts set comment = ? where disaster_name = ?', [$request->comment,$request->disaster_name]);
+	DB::update('update disaster set disaster_kind = ? where disaster_name = ?', [$request->disaster_kind,$request->disaster_name]);
 	    
         //リダイレクト
 	return redirect()->to('/posts');
@@ -120,7 +120,7 @@ class PostController extends Controller
     public function destroy($disaster_name)
     {
 	// 更新
-	DB::delete('delete from posts where disaster_name = ?', [$disaster_name]);
+	DB::delete('delete from disaster where disaster_name = ?', [$disaster_name]);
 	    
         //リダイレクト
 	return redirect()->to('/posts');
