@@ -72,9 +72,9 @@
                 <td style="width:30%">{{ $post->disaster_kind }}</td>
 		　　<td style="width:30%">{{ $post->disaster_area }}</td>
                 <td>
-                      <a href="/posts/show/{{$post->disaster_name}}" class="btn btn-primary btn-sm">詳細</a>
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="/posts/show/{{$post->disaster_name}}" class="btn btn-primary btn-sm">詳細</a>
                 <td>
-　　　　　　　　　　    <a href="/posts/edit/{{$post->disaster_name}}" class="btn btn-primary btn-sm">編集</a>
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="/posts/edit/{{$post->disaster_name}}" class="btn btn-primary btn-sm">編集</a>
                 </td>
                 <td>
                       <form method="post" action="/posts/destroy/{{$post->disaster_name}}">
