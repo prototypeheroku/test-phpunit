@@ -6,7 +6,7 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
 	rel="stylesheet">
 
-    <h1>一覧表示</h1>
+    //<h1>一覧表示</h1>
 
 　　　　　　　　<p class="text-left" style="font-size: 15pt; font-weight: bold; padding-left: 20px; border-left: 6px solid #337ab7; margin-top:30px">災害一覧画面</p>
 		<div style="border: 1px solid #bfbfbf; padding: 10px">
