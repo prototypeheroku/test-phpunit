@@ -29,7 +29,7 @@ class PostController extends Controller
  
 	    
         //ページネーション
-        $posts = $query->orderBy('title','asc')->paginate(5);
+        $posts = $query->orderBy('disaster_name','asc')->paginate(5);
         return view('posts.index')->with('posts',$posts);
     }
 
