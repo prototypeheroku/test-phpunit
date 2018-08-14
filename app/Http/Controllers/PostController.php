@@ -39,6 +39,11 @@ class PostController extends Controller
         $post->title = "0001";
         $post->comment = "テスト０００１";
         return view('posts.create', ['post' => $post]);
+	
+	//post->disaster_name
+	//post->disaster_kind
+	//post->disaster_area
+	    
     }
 
     public function add(Request $request)
