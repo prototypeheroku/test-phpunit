@@ -71,6 +71,7 @@
                 <td style="width:15%">{{ $post->disaster_area }}</td>
                 <td>
 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="/posts/show/{{$post->disaster_name}}" class="btn btn-primary btn-sm">詳細</a>
+                </td>
                 <td>
 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="/posts/edit/{{$post->disaster_name}}" class="btn btn-primary btn-sm">編集</a>
                 </td>
