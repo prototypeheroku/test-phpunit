@@ -69,8 +69,8 @@
         @foreach ($posts as $post)
             <tr>
                 <td style="width:20%">{{ $post->disaster_name }}</td>
-                <td style="width:30%">{{ $post->disaster_kind }}</td>
-		　　<td style="width:30%">{{ $post->disaster_area }}</td>
+                <td style="width:15%">{{ $post->disaster_kind }}</td>
+		　　<td style="width:15%">{{ $post->disaster_area }}</td>
                 <td>
 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="/posts/show/{{$post->disaster_name}}" class="btn btn-primary btn-sm">詳細</a>
                 <td>
