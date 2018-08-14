@@ -53,8 +53,8 @@ class PostController extends Controller
 	    
 	    
 	// 追加
-        DB::table('posts')->insert(
-            ['title' => $request->title, 'comment' => $request->comment]
+        DB::table('disaster')->insert(
+            ['disaster_name' => $request->disaster_name, 'disaster_kind' => $request->disaster_kind, 'disaster_area' => $request->disaster_area]
         );
 	
 	// 更新    
