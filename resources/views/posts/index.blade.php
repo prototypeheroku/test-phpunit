@@ -61,8 +61,6 @@
                 <th>{{ __('災害名') }}</th>
                 <th>{{ __('災害種別') }}</th>
                 <th>{{ __('災害地域') }}</th>
-                <th>{{ __('') }}</th>
-                <th>{{ __('') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -70,7 +68,7 @@
             <tr>
                 <td style="width:20%">{{ $post->disaster_name }}</td>
                 <td style="width:15%">{{ $post->disaster_kind }}</td>
-		　　<td style="width:15%">{{ $post->disaster_area }}</td>
+                <td style="width:15%">{{ $post->disaster_area }}</td>
                 <td>
 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="/posts/show/{{$post->disaster_name}}" class="btn btn-primary btn-sm">詳細</a>
                 <td>
@@ -85,8 +83,8 @@
                              <input type="hidden" name="_token" value="{{csrf_token()}}">
                          </div>
                       </form>
-　　　　　　　　            </td>
-             </tr>
+                </td>
+            </tr>
         @endforeach 
         </tbody>
     </table>
