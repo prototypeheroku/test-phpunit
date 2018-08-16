@@ -119,7 +119,7 @@ class PostController extends Controller
     public function destroy($disaster_name)
     {
 	// 更新
-	DB::delete('delete from posts where disaster_name = ?', [$disaster_name]);
+	DB::delete('delete from posts where disaster_name = ?', [$request->disaster_name]);
 	    
         //リダイレクト
 	return redirect()->to('/posts');
