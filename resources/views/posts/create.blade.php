@@ -66,7 +66,12 @@
 			
 			<input type="hidden" name="_token" value="{{csrf_token()}}">
 			
-			<input type="submit" value="登録" class="btn btn-primary" style="margin:20px;">
+			<div class="row">
+			  <div class="col-sm-12">
+			    <input type="submit" value="登録" class="btn btn-primary" style="margin:20px;">
+			  </div>
+			</div>
+			
 			<div class="row">
                            <div class="col-sm-12">
                               <a href="/posts" class="btn btn-primary" style="margin:20px;">一覧に戻る</a>
